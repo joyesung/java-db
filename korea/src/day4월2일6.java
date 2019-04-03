@@ -66,12 +66,12 @@ public class day4월2일6 {
 	// 리턴타입 : 배열(채워진 배열), 정수(중복되지 않은 랜덤한수),boolean(중복여부)
 	           //boolean(배열을 채웠는지 못채웠는지 여부)
 	public static boolean createRandArr(int min, int max, int []arr){
-		if(arr == null){
-			return false;
-		}
-		if(max-min+1<arr.length){
-			return false;	
-		}
+		if(arr == null){	return false;  }
+		
+		
+		if(max-min+1<arr.length){ return false;	}
+			
+		
 		int cnt = 0;
 		while(cnt < arr.length){
 			int r = random(min,max);
@@ -90,12 +90,29 @@ public class day4월2일6 {
 	public static void printArr(int []arr){
 		System.out.print("[");
 		for(int tmp:arr){
-			System.out.println(tmp + " ");
+			System.out.print(tmp + " ");
 		}
-		System.out.println("]\n");
+		System.out.print("]\n");
 	}
+		
+	public static int contain2(int []arr, int num, int cnt){
+			if(arr == null){
+				return -1;
+			}
+			//배열의 크기보다 더 많이 검색하려고 하는 경우
+			if(cnt > arr.length){
+				cnt = arr.length;
+			}
+			for(int i=0; i<cnt; i++){
+				if(arr[i] == num){
+					return i;
+	}
+	 
+	
+	          }
 	
 	
+		}
 	
 	
 }

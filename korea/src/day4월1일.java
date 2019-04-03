@@ -346,7 +346,7 @@ public class day4월1일 {
 		}
 			*/
 	    //버블정렬: 단순하고 효율이 가장 안좋다
-		int [] arr = new int [] {1,2,3,5,6,9,4,7,8,};
+		/*int [] arr = new int [] {1,2,3,5,6,9,4,7,8,};
 		//반복 횟수: 배열의 크기 - 1
 		for(int i=0; i<arr.length-1; i++){
 			for(int j=0; j<arr.length-1; j++)
@@ -362,8 +362,7 @@ public class day4월1일 {
 		}
 		System.out.println();
 		
-		
-		
+		*/	
 		
 		
 		
