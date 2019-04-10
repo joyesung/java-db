@@ -8,9 +8,12 @@ public class dat4월4일4 {
 		//1. 매개변수의 갯수가 다르다
 		//2. 매개변소의 갯수가 같지만 자료형이 다르다.
 		//
+		int num= 1;
+		int i =1;
 		System.out.println(sum(1,1));
 		System.out.println(sum(1.2,1.2));
 		System.out.println(sum(1,2,3));
+		System.out.println(num*i);
 		
 	
 		}
@@ -42,8 +45,9 @@ public class dat4월4일4 {
 		for(int i=start; i<=end; i++){
 			printMultiTable(i);
 		
-	
+		}
 			
+	}
 			public static void  printMultiTable(int num){
 				
 				for(int i=1; i<=9; i++){

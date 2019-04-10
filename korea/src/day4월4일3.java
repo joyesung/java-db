@@ -17,7 +17,7 @@ public class day4월4일3 {
 	
 	
 	
-	/*기능 : 정수 num이 주어지면 주어진 정수 num !를 알려주ㅡㄴ 메소드
+	/*기능 : 정수 num이 주어지면 주어진 정수 num !를 알려주는메소드
 	 * 매개변수 : int num
 	 * 리턴타입 : num!=>int
 	 * 메소드명 : factorial
