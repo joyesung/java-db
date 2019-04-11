@@ -14,11 +14,14 @@ public class day4월10일 {
 		stdMng.insert(new Student("곽소함", 1,1,1,100,90,80));//이름이 없는 객체라서 익명개체라 한다
 		stdMng.insert(new Student("조예성", 1,1,1,100,100,100));
 		stdMng.print();
-		stdMng.modify(new Student("곽효함",1,1,1,100,100,100));
 		System.out.println("---------------------------");
+		
+		stdMng.modify(new Student("곽효함",1,1,1,100,100,100));
 		stdMng.print();
-		stdMng.delete(new Student("",1,1,1,0,0,0));
 		System.out.println("---------------");
+		
+		
+		stdMng.delete(new Student("",1,1,1,0,0,0));
 		stdMng.print();
 	}
 	public static void prinMenu(){

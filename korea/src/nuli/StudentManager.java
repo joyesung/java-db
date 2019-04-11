@@ -1,5 +1,7 @@
 package nuli;
 
+import java.util.Scanner;
+
 public class StudentManager {
 	private Student std[];//학생들의 정보를 담을 배열
 	private int count;    //현재 저장된 학생수
@@ -28,7 +30,15 @@ public class StudentManager {
 		//std[count]가 같이 사용하기 때문에 매개변수 s가 바뀌면
 		//std[count]도 같이 바뀔수 있다.
 		//std[count++] = s;
-		std[count++] = new Student(s);
+		//학년,반,번호로 검색해서 해당 학생 정보가 없으면(조건식) 학생정보 추가(실행문)
+		//있으면 아무것도 안함
+		
+		
+		if(search(s.getGrade(),s.getClassNum(),s.getNum())
+				== -1){//찾았으면 
+			std[count++] = new Student(s);
+		}
+		
 		//count++;=[count] 
 		//+ ++;(증감연산자 추가 밑에다)
 		
@@ -95,5 +105,48 @@ public class StudentManager {
 			
 			
 		}
+	
 	}
+	public static void printMenu(){
+		System.out.println("-------------");
+		System.out.println("1. 학생정보추가");
+		System.out.println("2. 학생정보수정");
+		System.out.println("3. 학생정보삭제");
+		System.out.println("4. 학생정보출력");
+		System.out.println("5. 종료");
+		System.out.println("메뉴를 선택하세요: ");
+	
+	}
+	
+	public Student inputSearchStudent(Scanner scan){
+		Student s = new Student();
+		System.out.println("학년 : ");
+		s.setGrade(scan.nextInt());//문자열로 돌려주는 기능
+		System.out.println("반 : ");
+		s.setClassNum(scan.nextInt());
+		System.out.println("번호 : ");
+		s.setNum(scan.nextInt());
+		return s;
+	}
+	
+	
+	
+	public Student inputStudent(Scanner scan){
+		Student s = inputSearchStudent(scan);
+		System.out.println("이름 : ");
+		s.setName(scan.next());//문자열로 돌려주는 기능
+		System.out.println("국어 : ");
+		s.setKor(scan.nextInt());
+		System.out.println("영어 : ");
+		s.setEng(scan.nextInt());
+		System.out.println("수학 : ");
+		s.setMath(scan.nextInt());
+		return s;
+	}
+	
+	
+		
+		
+	
+	
 }
