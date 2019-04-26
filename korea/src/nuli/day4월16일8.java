@@ -40,7 +40,7 @@ public class day4월16일8 {
 					//일치하면 반복문을 종료 후 프로그램을 종료
 				}else{
 					System.out.println("id와 비밀번호가 일치합니다.");
-					break;
+					break; 
 				}
 			
 			}

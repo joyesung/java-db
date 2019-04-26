@@ -16,7 +16,7 @@ public class Shape implements Draw {
 		
 	}
 	
-	public Point getCenter() {
+	public java.awt.Point getCenter() {
 		return center;
 	}
 	public void setCenter(Point center) {

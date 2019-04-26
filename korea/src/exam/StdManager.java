@@ -105,7 +105,7 @@ public class StdManager {
 			Std tmp = (Std)it.next();
 			System.out.println(tmp); //학생정보가 추가된 tmp의값을 출력한다.
 		
-		
+		  
 		}
 	
 	

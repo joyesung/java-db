@@ -54,8 +54,8 @@ public double distance(int x, int y){
 	return Math.sqrt(Math.pow(dx, 2.0) // 공식이다. 외우자
 			+ Math.pow(dy, 2.0));
 }
-public  move(Point p){ y--; }
-public Point(){ y++; }
-public Point moveLeft(){ x--; }
-public  moveRight(){ x++; }
+
+
+public void moveLeft(){ x--; }
+public void moveRight(){ x++; }
 }

@@ -34,10 +34,14 @@ public class 로또3 {
 		//생성할 수 있는 숫자의 범위보다 만들어야 하는 갯수가 더 크면
 		// 중복될수 밖에 없기 때문에 무한루프에 빠지는 경우가 생길것을
 		//막기위한 코드
+		//max : 10, min : 1
+		//max와 min에서 나올 수 있는 중북되지 않은 수는 최대 몇개 10개
+		//count : 만들갯수
 		if(max-min+1 < count)
 			return null;
 		Set<Integer> set = new HashSet<Integer>();
 		//count개 만큼 생성하기 위한 조건식
+		
 		while(set.size()<count){//책에서의 6을 count로 대체
 			//min-max사이의 랜덤한 수를 생성하여 num에 저장
 			int num = (int)(Math.random()*(max-min+1))+min;//45를 max-min+min으로

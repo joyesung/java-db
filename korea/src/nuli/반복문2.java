@@ -13,7 +13,7 @@ public class 반복문2 {
 		//향상된 for 사용조건
 		//1.배열이나 컬렉션프레임워크 일 때 사용
 		//2.배열의 값을 확인할 때 사용
-		//3.모든 배열을 확인
+		//3.모든 배열을 확인하면서 번지를 신경안쓸때
 		//4.배열의 값을 수정할때는 사용하지 않음
 		/*for(int tmp : arr){
 			System.out.print(tmp + " ");
@@ -41,6 +41,7 @@ public class 반복문2 {
 			  max = tmp;
 		  }
 		}
+
 		System.out.println("배열의 최댓값 : " + max);
 		
 	}

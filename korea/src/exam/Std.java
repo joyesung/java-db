@@ -43,7 +43,7 @@ public class Std {
 	public void setAvr(double avr) {
 		//평점은 0에서 4.5사이이기때문에 범위를 벗어나는
 		//점수가 들어온다면 저장하지 않는다.
-		if(avr > 4.5 || avr < 0)
+		if(avr > 4.5 || avr < 0) //or연산자 || 둘중에 한개라도 걸리면 참
 			return;
 		this.avr = avr;
 	}

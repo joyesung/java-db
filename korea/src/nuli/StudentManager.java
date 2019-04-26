@@ -5,16 +5,19 @@ import java.util.Scanner;
 public class StudentManager {
 	private Student std[];//학생들의 정보를 담을 배열
 	private int count;    //현재 저장된 학생수
-	private final int MIN_STUDENT_COUNT = 300;
+	private final int MIN_STUDENT_COUNT = 300;//final를 통해 배열의 최솟값을 300으로 저장한다
 	
-	public StudentManager(){
-		std = new Student[MIN_STUDENT_COUNT];
+	public StudentManager(){//Student 매니져의 생성자(생성자란 무엇일까요? 생성자는 객체를 초기화해주는 메소드입니다. 
+		//생성자를 사용하면 객체가 생성될 때 실행되어야 할 행동들을 정의해놓을 수 있습니다. 또한 객체가 생성될 때 입력받을 변수도 정해놓을 수 있습니다. 
+		//생성자는 사용될 객체의 기능을 정의해 놓은것이다.
+		
+		std = new Student[MIN_STUDENT_COUNT];//std라는 학생정보 배열이 min 300짜리 라는 배열이다
 	}
-	public StudentManager(int studentCnt){
+	public StudentManager(int studentCnt){//생성자 조건문을 통해 기능을 추가 
 		if(studentCnt>=MIN_STUDENT_COUNT)
 			std = new Student[studentCnt];
 		else
-			std = new Student[MIN_STUDENT_COUNT];
+			std = new Student[MIN_STUDENT_COUNT];//값이 작으면 참이고 값이 크면 배열은 자동으로 공간이 커지고 새로운 주소가 생김 
 	}
 	//기능 : 학생정보를 배열에 추가
 	//매개변수 : 학생정보=>Student s(1번째 방법)
@@ -22,7 +25,7 @@ public class StudentManager {
 	//리턴타입 : void 
 	//메소드명 : insert
 	
-	public void insert (Student s){
+	public void insert (Student s){//insert는 기능을 추가 끼어넣기 삽입
 		//std[??] : Student 클래스의 객체는 초기에 선언만 되어 잇음
 		//insert 기능에서 객체 정보를 추가하려면 객체를 생성한 후
 		//매개변수의 값을 복사해야함.
@@ -34,8 +37,8 @@ public class StudentManager {
 		//있으면 아무것도 안함
 		
 		
-		if(search(s.getGrade(),s.getClassNum(),s.getNum())
-				== -1){//찾았으면 
+		if(search(s.getGrade(),s.getClassNum(),s.getNum())//조건문 매개변수 s에 입력된 정보를 찾아서 못찾으면 
+				== -1){//중복되는게 없으면 -1
 			std[count++] = new Student(s);
 		}
 		
@@ -48,8 +51,8 @@ public class StudentManager {
 	//리턴타입:  없다//=>void왜냐하면 알려줄필요가 없다 내부에서알고있기때문에
 	//메소드명 : print
 	public void print(){
-		for(int i=0; i<count;i++){
-			System.out.println(std[i]);
+		for(int i=0; i<count;i++){//cont는 배열이기 때문에 배열은 0번지 부터이기 대문에 100ㅇ이면 100-99까지 갯수만 100 그래서 i가 같지않고 전단계 까지 증감하고 입력한다. 
+			System.out.println(std[i]);//증감된i를 계속 출력 즉=> 배열에 저장된 정보를 모두 출력함
 		}
 	}
 	//기능 : 학생정보 검색 =>(학생정보를 수정 또는 삭제하기 위해서는 학생의 정보가 있는지를 알아야 하기 때문
@@ -63,7 +66,7 @@ public class StudentManager {
 			if(std[i].getGrade() == grade && 
 				std[i].getClassNum() == classNum &&
 				std[i].getNum() == num){
-				return i;
+				return i;//찾는정보가 3개다 맞아야 학생이 있는것 그래서 &&논리연산자를 써도 3개다 참이면 i값을 알려준다
 				}
 		}
 		return -1;// 배열은 0번지 부터 시작하기 때문에 0<=배열 이렇기 때문에 없으면 -1 즉 주소를 못찾았다 없다는 뜻이다. 그래서 return -1;를 입력하는것이다.
@@ -73,14 +76,14 @@ public class StudentManager {
 	// 기능 : 학생정보를 배열에서 수정
 	//매개변수 : 학생정보 = > Student s
 	//리턴타입 : 없다
-	//메소드명 : modify
+	//메소드명 : modify=>수정
 	public void modify(Student s){
 		//검색했을 때 해당 정보가 있는 번지
 		int searchIndex 
 		= search(s.getGrade(),s.getClassNum(),s.getNum());
 		//if(searchIndex != -1)
 		if(searchIndex >= 0){//찾았으면 배열은 0부터 시작하기 때문에
-			std[searchIndex] = new Student(s);
+			std[searchIndex] = new Student(s);//오른쪽의 new Student(s)의 값을 왼쪽 std배열에 저장
 			
 		}
 		
@@ -88,17 +91,17 @@ public class StudentManager {
 	//학생정보 삭제
 	//매개변수 : 학생정보 => Student s
 	//리턴타입 : 없다 => void
-	//메소드명 : delete
+	//메소드명 : delete=>삭제 기능
 	public void delete(Student s){
-		int searchIndex
+		int searchIndex//찾기 기능
 		= search(s.getGrade(),s.getClassNum(),s.getNum());
 		if(searchIndex != -1){//찾았으면 
-			std[searchIndex] = new Student(s);
-			//배열을 밀기
+			std[searchIndex] = new Student(s);//오른쪽 참조변수 주소에 있는 값을 왼쪽에 저장
+			//배열을 밀기                0,1,2,3,4,5,6,7,8,9
 			for(int i=searchIndex;i<count-1; i++){
 				std[i] = std[i+1]; //i에 i+1한 다음번지 값을 저장해라 그래서 원래 주소지는 i+1한주소로 바뀐다.
 			}
-			std[count -1] = null;
+			std[count -1] = null;//값이 존재 하지 않는다 null
 			count--;//count배열의 칸을 한칸 줄여라 
 			
 			//현재 저장된 갯수를 하나 감소
@@ -107,7 +110,7 @@ public class StudentManager {
 		}
 	
 	}
-	public static void printMenu(){
+	public static void printMenu(){//출력메뉴
 		System.out.println("-------------");
 		System.out.println("1. 학생정보추가");
 		System.out.println("2. 학생정보수정");
@@ -118,14 +121,14 @@ public class StudentManager {
 	
 	}
 	
-	public Student inputSearchStudent(Scanner scan){
-		Student s = new Student();
-		System.out.println("학년 : ");
-		s.setGrade(scan.nextInt());//문자열로 돌려주는 기능
-		System.out.println("반 : ");
+	public Student inputSearchStudent(Scanner scan){//값을 Scanner에저장하여 출력
+		Student s = new Student();// 오른쪽 주소의 값을 왼쪽에저장
+		System.out.println("학년 : ");//학년을 출력
+		s.setGrade(scan.nextInt());//문자열로 돌려주는 기능		
+		System.out.println("반 : ");//반을 출력하는기능
 		s.setClassNum(scan.nextInt());
-		System.out.println("번호 : ");
-		s.setNum(scan.nextInt());
+		System.out.println("번호 : ");//번호를 출력
+		s.setNum(scan.nextInt()); 
 		return s;
 	}
 	
