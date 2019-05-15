@@ -1,0 +1,1 @@
+call search_education_list('frog0039'); -- 프로시저명(매개변수) 호출 공식 call로 시작

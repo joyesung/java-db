@@ -1,0 +1,15 @@
+/* 2.회원아이디를 매개로한 교육 및 관람 예약확인 */
+USE museum; -- museum테이블을 사용한다는 것
+DROP PROCEDURE IF EXISTS search_visit_list;  -- 만들기전에 이러한(search_visit_list) 프로시저가 있으면 삭제한다
+DELIMITER //  -- delimiter는 문법 범위설정
+CREATE PROCEDURE search_visit_list( -- 프로시져 를 생성한다 뒤에 search_visit_list는 프로시저명
+	IN in_user_id VARCHAR(45) -- procedure에서 user_id 를 사용 =>매개변수 in in_은 java에서 처럼 this.매개변수처럼 같은 의미로 사용하는것
+)
+BEGIN -- 조건문 시작을 알림 문법임
+	
+    SELECT * FROM re where re_user_id = in_user_id AND  re_situation ='예약신청' AND re_ed_num is null; -- select * from =>모두검색 re 테이블을 참조 re테이블의 사용할 변수 user
+    -- 사용할 매개변수 re_user_id 는 user_id와 같다 사용할 외래키는 = 참조테이블 기본키 그리고 조건 설정 예약신청과 교육번호가 null인경우가 나온다 즉 관람예약이 나온다.
+    
+END // -- delimiter // ~ end// 문법이다 
+DELIMITER ; -- delimiter 는 처음과 끝 부분에 쓴다 처음에는 // 끝에는 ;를 사용한다.
+
