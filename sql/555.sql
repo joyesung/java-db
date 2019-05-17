@@ -1,4 +1,4 @@
-/* website 데이터 베이스에서 카페 회우너수를 구하시오*/
+/* website 데이터 베이스에서 카페 회원수를 구하시오*/
 update cafe
 set
 cafe.cafe_total = (select 
