@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		thead, tfoot {
+			background : darkgray;
+			color : yellow;
+		}
+		tbody tr:nth-child(even) { /* 짝수 <tr>에 적용*/
+			background : aliceblue;
+		}
+		td, th{
+			width: 100px;
+			height: 40px;
+		}
+			
+	</style>
+</head>
+<body>
+		<table><!--표를 의미-->
+			<thead>	
+				<tr>
+				<th>이름</th> <!--가운데정렬과 굵은 글씨로 써진다.특징-->
+				<th>html</th>
+				<th>css</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+				<td>황기태</td>
+				<td>80</td>
+				<td>70</td>
+			
+				</tr>
+					<tr><!--한줄을 의미-->
+					<td>이재문</td>
+					<td>95</td>
+					<td>99</td>
+				</tr>
+			
+		
+			<tr>
+				<!--한줄을 의미-->
+			<td>이병은</td>
+			<td>85</td>
+			<td>90</td>
+			</tr>
+			<tr>
+					<!--한줄을 의미-->
+				<td>김남윤</td>
+				<td>50</td>
+				<td>40</td>
+				</tr>
+			</tbody>
+			<tfoot>
+				<td>합</td>
+				<td>310</td>
+				<td>249</td>
+			</tfoot>
+		</table>
+</body>
+</html>

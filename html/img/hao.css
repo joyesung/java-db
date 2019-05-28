@@ -1,0 +1,26 @@
+*{
+	box-sizing: border-box;
+}
+.yesung{
+	border: 1px solid black;
+	height: 300px;
+	padding: 20px;
+}
+.peace{
+	border: 1px solid red;
+	height: 100%;
+	text-align: center;
+	
+}
+.pig{
+	border: 1px solid black;
+	height: 300px;
+}
+.jo{
+	border: 1px solid blue;
+	margin: 20px;
+	height: calc(100% - 20px * 2);
+	width: calc(100% - 20px * 2);
+	text-align: center;
+	padding-top: 100px;
+}

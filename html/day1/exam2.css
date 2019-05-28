@@ -1,0 +1,31 @@
+body{
+    font-weight: 400;/* 글자 굵기*/
+   /*font-size: 200px;/*글자크기*/
+   /*em은단위함수*/
+   font-size: 1.5em; 
+   text-decoration: underline;
+    /*color: #ff0000;*/
+    /*color: red*/
+    /*밑에꺼는 함수를 이용한것*/
+    color: rgb(255, 0, 0);
+    text-align: right;
+
+}
+body>div{/*>는 오른쪽이아들*/
+    font-size: 0px;
+}
+div>div{
+    font-size: 20px;
+    display: inline-block;
+    /*
+    border-style: solid;
+    border-color: black;
+    border-width: lpx;
+    */
+    border: 1px solid blue;
+    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    
+
+}

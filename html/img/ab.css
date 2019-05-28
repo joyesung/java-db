@@ -1,0 +1,21 @@
+div{
+	position: absolute;/*absolute는 html의 화면을 기준으로 전체를 잡는다.*/
+	/*width: 300px;*/
+	/*height: 300px;*/
+	top: 0px;    /*브라우져 화면크기가 변화면 컨텐츠도 변한다.*/
+	left: 50px;
+	right: 50px;
+	bottom: 0px;
+}
+body{
+	height: 200vh;
+	margin: 0;
+}
+button{
+	position: fixed;
+	height: 50px;
+	width: 50px;
+	bottom: 10px;
+	right: 10px;
+
+}

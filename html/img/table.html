@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<style>
+		.table th,
+		.table td{
+			width: 100px;
+			height: 40px;
+			border: 1px solid black;
+		}
+		table{
+			border-collapse: collapse;
+		}
+			thead { /* <thead>의 모든 셀 적용 */
+			background : darkgray;
+			color : yellow;
+		}
+			td, tfoot th { /* 아래쪽 테두리만 회색 */
+			border-bottom : 1px solid gray
+		}
+		
+
+	</style>
+</head>
+<body>
+	<table><!--표를 의미-->
+		<thead>	
+			<tr>
+			<th>이름</th> <!--가운데정렬과 굵은 글씨로 써진다.특징-->
+			<th>나이</th>
+			<th>주소</th>
+			<th>성별</th>
+			<th colspan="2">주민번호1</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+			<td rowspan="2">홍길동</td><!--rowspan은행합치기 옆에 숫자는 합칠 갯수-->
+			<td>20</td>
+			<td>대한민국</td>
+			<td>남</td>
+			<td>000101-3xxxxxx</td>
+			<td>000101-3xxxxxx</td>
+			</tr>
+			<tr><!--한줄을 의미-->
+				<td>20</td>
+				<td>대한민국</td>
+				<td>남</td>
+				<td>000101-3xxxxxx</td>
+				<td>000101-3xxxxxx</td>
+			</tr>
+		</tbody>
+		<tfoot>
+			<td>-</td>
+			<td>20</td>
+			<td>-</td>
+			<td>남</td>
+			<td>-</td>
+			<td>-</td>
+		</tfoot>
+	</table>
+</body>
+</html>
