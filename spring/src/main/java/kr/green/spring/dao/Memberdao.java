@@ -8,4 +8,7 @@ public interface Memberdao {
 
 	void signup(Membervo mvo);
 	
+	void signin(Membervo mvo);//signin을 추가
+
+	void modify(Membervo mvo);
 }

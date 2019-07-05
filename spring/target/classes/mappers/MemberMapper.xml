@@ -5,11 +5,17 @@
 <mapper namespace="kr.green.spring.dao.Memberdao">
   <select id="getMember" resultType="kr.green.spring.vo.Membervo">
     select * from member where id = #{id}
-  
   </select>
+  
   <insert id="signup">
   insert into member(id,pw,gender,email,name)
   			  values(#{id},#{pw},#{gender},#{email},#{name})<!-- {}는 매개변수 -->
-  
   </insert> 
+  <update id="modify">
+  update member
+  	set
+  		pw=#{pw},gender=#{gender},email=#{email}
+	where 
+		id=#{id}
+  </update>
 </mapper>

@@ -26,5 +26,28 @@ public class Memberserviceimp implements Memberservice {
 		memberdao.signup(mvo);
 		return true;
 	}
+	@Override
+	public boolean signin(Membervo mvo) {
+		if(mvo == null)//예외처리
+			return false;
+		Membervo ovo = memberdao.getMember(mvo.getId());//아이디 값을 저장
+		if(ovo == null)
+			return false;
+		if(ovo.getPw().equals(mvo.getPw()))//equals를통해 값을 비교해 같은지 다른지 확인한다
+			return true;
+		return false;
+	}
+	@Override
+	public boolean modify(Membervo mvo, String oldPw) {
+		if(mvo == null)//예외처리
+			return false;
+		if(memberdao.getMember(mvo.getId()).getPw().equals(oldPw)) {
+			memberdao.modify(mvo);
+			return true;
+		}
+		return false;
+	}
 	
 }
+
+
