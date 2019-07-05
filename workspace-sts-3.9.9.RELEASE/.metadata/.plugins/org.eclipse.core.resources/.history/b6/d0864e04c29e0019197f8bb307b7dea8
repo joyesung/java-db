@@ -1,0 +1,12 @@
+package kr.green.spring.service;
+
+import kr.green.spring.vo.Membervo;
+
+
+public interface Memberservice {
+	public boolean signup(Membervo mvo);
+
+	public boolean signin(Membervo mvo);
+	
+	
+}

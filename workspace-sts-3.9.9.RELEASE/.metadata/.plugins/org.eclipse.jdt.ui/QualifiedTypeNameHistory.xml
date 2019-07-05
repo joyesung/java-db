@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="kr.green.spring.dao.StudentDAO"/>
+<fullyQualifiedTypeName name="kr.green.spring.vo.Membervo"/>
+<fullyQualifiedTypeName name="kr.green.spring.service.Memberservice"/>
+<fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+<fullyQualifiedTypeName name="kr.green.spring.dao.Memberdao"/>
+<fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+</qualifiedTypeNameHistroy>
